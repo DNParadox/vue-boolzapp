@@ -1,0 +1,59 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Unico container centrale */
+.container {
+    padding-top: 1rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+/* Debug rimuovere in seguito RIS */
+#app {
+    background-color: lightblue;
+}
+
+
+.header-app-left{
+    width: 30%;
+    height: 100%;
+    background-color: lightgreen;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-right: 1px solid black;
+}
+
+.user-info {
+    width: 50%;
+    height: 20%;
+    background-color: lightcoral;
+    display: flex;
+    align-items: center;
+}
+
+    .user-info img {
+        border-radius: 50%;
+        width: 20%;
+        margin: 0.3rem;
+    }
+
+.user-function {
+    padding-right: 1rem;
+}
+    .user-function i {
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
+    }
+
+
+
+/* Common */
+i {
+    color: #b1b1b1;
+}
