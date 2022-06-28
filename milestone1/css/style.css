@@ -5,6 +5,9 @@
     box-sizing: border-box;
 }
 
+body {
+    /* background-color: green; */
+}
 /* Unico container centrale */
 .container {
     padding-top: 1rem;
@@ -12,35 +15,58 @@
     margin: 0 auto;
 }
 
-
-/* Debug rimuovere in seguito RIS */
-#app {
-    background-color: lightblue;
+.container-app {
+    width: calc(100vw - 290px)
 }
 
+/* Header */
+.header-app{
+    display: flex;
+    background-color: #eaeaea;;
+}
 
-.header-app-left{
+    /* Header App left */
+    .header-app-left{
+        width: 30%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-right: 1px solid #b1b1b1;
+    }
+
+    /* Header App right */
+    .header-app-right{
+        width: 70%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+     
+
+/* Left Bar */
+.leftaside {
     width: 30%;
     height: 100%;
-    background-color: lightgreen;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-right: 1px solid black;
 }
 
+/* Common */
+i {
+    color: #b1b1b1;
+}
+    /* Utilizzata in Header left / Header Right */
 .user-info {
     width: 50%;
     height: 20%;
-    background-color: lightcoral;
     display: flex;
     align-items: center;
 }
 
     .user-info img {
         border-radius: 50%;
-        width: 20%;
-        margin: 0.3rem;
+        width: 40px;
+        margin: 0.4rem;
     }
 
 .user-function {
@@ -51,9 +77,63 @@
         padding-right: 0.2rem;
     }
 
-
-
-/* Common */
-i {
-    color: #b1b1b1;
+.pdl03 {
+    padding-left: 0.3rem;
 }
+/* Common */
+
+/* leftSide  */
+
+/* LeftSide - Notification */
+.notification {
+    background-color: #8edafb;
+}
+.dflex {
+    display: flex;
+    align-items: center;
+    padding: 0.6rem;
+
+}
+
+.bellcontainer {
+    border-radius: 50%;
+    background-color: white;
+    width: 2rem;
+    height: 2rem;
+    padding: 0.6rem;
+}
+    .bellcontainer i {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        color: #8edafb;
+    }
+
+.subtext {
+    text-decoration: underline;
+    color: #507687;;
+
+}
+
+/* Fine notification */
+
+/* Inizio search friend bar */
+.searchfriend {
+    margin: 0 auto;
+    width: 95%;
+    background-color: #fafafa;
+}
+    .searchfriend input {
+        width: 100%;
+        border: none;
+        
+    }
+
+    /* Search bar */
+    .searchbar {
+        /* togliere dopo */
+        /* background-color: #fff; */
+        background-color: lightcoral;
+        border: 0.2px solid #b1b1b1;
+        margin: 0.5rem 0;
+    }
