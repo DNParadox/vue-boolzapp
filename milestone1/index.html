@@ -38,7 +38,7 @@
                           <div class="user-info">
                             <img src="img/avatar_io.jpg" alt="[Vue user]">
                             <div class="utent-name pdl03">
-                                 [Vue user] <br>
+                                 Nome Utente <br>
                                  Ultimo accesso: [Vue Date]
                             </div>
                         </div>
@@ -50,24 +50,73 @@
                         </div>
                     </div>
                 </div>
-                <!-- left Bar-->
-                <div class="leftaside">
-                    <div class="notification">
-                        <span class="dflex"> 
-                                <div class="bellcontainer dflex"> <i class="fa-solid fa-bell-slash"></i> </div>
-                                <div class="pdl03">
-                                    <span>Ricevi notifiche di nuovi messaggi<br></span>
-                                    <span class="subtext">Attiva notifiche desktop</span>
+                <div class="core">
+                    <!-- left bar -->
+                    <div class="leftaside">
+                        <div class="notification">
+                            <span class="dflex"> 
+                                    <div class="bellcontainer dflex"> <i class="fa-solid fa-bell-slash"></i> </div>
+                                    <div class="pdl03">
+                                        <span>Ricevi notifiche di nuovi messaggi<br></span>
+                                        <span class="subtext">Attiva notifiche desktop</span>
+                                    </div>
+                            </span>
+                        </div>
+                        <div class="searchfriend">
+                            <div class="searchbar dflex">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input type="text" placeholder="Cerca o inizia una nuova chat">
+                            </div>
+                        </div>
+                        <!-- Friend list -->
+                        <div class="friendlist">
+                            <!-- template in VUE -->
+                                            <!-- User Info -->
+                            <div v-for="(element,index) in contacts" class="user-info">
+                                <!-- <img src="img/avatar_io.jpg" alt="[Vue user]"> -->
+                                <!-- <img src="../milestone1/img/avatar_1.jpg" alt=""> -->
+                                <img :src="'img/avatar' + element.avatar + '.jpg'" :alt="contacts[index].name">
+                                <div class="utent-name pdl03">
+                                    {{element.name}} <br>
+                                 <span class="previewmessages">{{element.messages[0].text}}</span>
+                                   
                                 </div>
-                        </span>
-                    </div>
-                    <div class="searchfriend">
-                        <div class="searchbar dflex">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                            <input type="text" placeholder="Cerca o inizia una nuova chat">
+                            </div>
+    
+    
                         </div>
                     </div>
-                </div>
+                    <!-- right side -->
+                    <div class="rightside">
+                        <div class="container-chat">
+
+                            <div class="leftchat">
+                                <div v-for="(element,index) in contacts" class="message friendchat">
+                                    {{element.text}}
+                                </div>
+                            </div>
+                            <div class="rightchat">
+                                <div class="message userchat">
+                                    [Vue Message]
+                                </div>
+                            </div>
+                          
+                        </div>
+
+                        <div class="bottom-chat">
+                            <div class="emoji">  
+                                <i class="fa-regular fa-face-smile"></i>
+                            </div>
+                            <input type="text" placeholder="scrivi un messaggio">
+                            <div class="audio">
+                                <i class="fa-solid fa-microphone"></i>
+                            </div>
+
+                          
+
+                        </div>
+                    </div>
+                </div>         
             </div>
         </div>
     </div>

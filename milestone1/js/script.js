@@ -5,6 +5,7 @@ var app = new Vue({
         {
             name: 'Michele',
             avatar: '_1',
+            index: 0,
             visible: true,
             messages: [
                 {

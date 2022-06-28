@@ -49,15 +49,17 @@ body {
 .leftaside {
     width: 30%;
     height: 100%;
+    background-color: white;
 }
-
+body {
+    background-color: #009487;;
+}
 /* Common */
 i {
     color: #b1b1b1;
 }
     /* Utilizzata in Header left / Header Right */
 .user-info {
-    width: 50%;
     height: 20%;
     display: flex;
     align-items: center;
@@ -83,6 +85,7 @@ i {
 
 .core {
     display: flex;
+    height: 500px;
 }
 /* Common */
 
@@ -115,7 +118,7 @@ i {
 
 .subtext {
     text-decoration: underline;
-    color: #507687;;
+    color: #507687;
 
 }
 
@@ -127,7 +130,7 @@ i {
     background-color: lightcoral;
     padding: 0.5rem;
 }
-    .searchfriend input {
+    input {
         width: 100%;
         border: none;      
     }
@@ -135,29 +138,39 @@ i {
     /* Search bar */
     .searchbar {
         background-color: #fff;
-        border: 0.2px solid #b1b1b1;
+        border: 1 solid #f6f6f6;
     }
         .searchbar input {
             padding-left: 1rem;
         }
+    
+/* friend list */
 
+.friendlist .user-info {
+    border-bottom: 1px solid #f6f6f6;
+}
+.previewmessages {
+    font-size: 0.6rem;
+    color: #507687;
+}
 /* Fine left side */
 
 /* right side  */
 .rightside {
     width: 70%;
     background-image:url(../img/mine.jpg);
-    height: 400px;
+    height: 100%;
     
 }
     .container-chat {
-        margin: 2rem auto;
         width: 80%;
+        height: 85%;
+        padding: 2rem 2rem;
     }
-        .leftchat{
+        /* .leftchat{
             display: flex;
             justify-content: left;
-        }
+        } */
 
             .message{
                 background-color: lightcoral;
@@ -172,7 +185,29 @@ i {
                 background-color: #d5f9ba;
             }
 
-        .rightchat{   
+        /* .rightchat{   
             display: flex;
             justify-content: right;
+        } */
+
+        .bottom-chat {
+            height: 15%;
+            display: flex;
+            align-items: center;
+            background-color: #f3eeea;
         }
+
+            .bottom-chat input {
+                width: 80%;
+                margin: 0 auto;
+                padding: 1.3rem 1rem;
+                border-radius: 11px;
+            }
+
+            .bottom-chat .emoji {
+                padding-left: 2rem;
+            }
+
+            .bottom-chat .audio {
+                padding-right: 2rem
+            }
