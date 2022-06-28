@@ -80,6 +80,10 @@ i {
 .pdl03 {
     padding-left: 0.3rem;
 }
+
+.core {
+    display: flex;
+}
 /* Common */
 
 /* leftSide  */
@@ -119,21 +123,56 @@ i {
 
 /* Inizio search friend bar */
 .searchfriend {
-    margin: 0 auto;
-    width: 95%;
     background-color: #fafafa;
+    background-color: lightcoral;
+    padding: 0.5rem;
 }
     .searchfriend input {
         width: 100%;
-        border: none;
-        
+        border: none;      
     }
 
     /* Search bar */
     .searchbar {
-        /* togliere dopo */
-        /* background-color: #fff; */
-        background-color: lightcoral;
+        background-color: #fff;
         border: 0.2px solid #b1b1b1;
-        margin: 0.5rem 0;
     }
+        .searchbar input {
+            padding-left: 1rem;
+        }
+
+/* Fine left side */
+
+/* right side  */
+.rightside {
+    width: 70%;
+    background-image:url(../img/mine.jpg);
+    height: 400px;
+    
+}
+    .container-chat {
+        margin: 2rem auto;
+        width: 80%;
+    }
+        .leftchat{
+            display: flex;
+            justify-content: left;
+        }
+
+            .message{
+                background-color: lightcoral;
+                padding: 1.3rem 4rem;
+                border-radius: 11px;
+            }
+
+            .message.friendchat {
+                background-color: #fff;
+            }
+            .message.userchat{
+                background-color: #d5f9ba;
+            }
+
+        .rightchat{   
+            display: flex;
+            justify-content: right;
+        }
