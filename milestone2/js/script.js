@@ -1,12 +1,13 @@
 var app = new Vue({
     el: '#app',
-    data: {
-      contacts: [
+    data:
+     {
+        index: 0,
+        userFilterText: '',
+        contacts: [
         {
             name: 'Michele',
             avatar: '_1',
-           
-            userFilterText: '',
             visible: true,
             messages: [
                 {
@@ -91,11 +92,38 @@ var app = new Vue({
     
     },
     methods: {
+  
         filterFriendsByText() {
             const userInputTextLower = this.userFilterText.toLowerCase();
 
-            // this.contacts.name
-            console.log(this)
+            this.contacts.forEach(element => {
+                if(element.name.toLowerCase().includes(userInputTextLower))
+                    element.visible = true;
+                else{
+                    element.visible = false;
+                }
+            
+            });
+        },
+        setClickChat(chatindex) {
+           this.index = chatindex;
+        },
+        
+        test(deepMessage) {
+            this.contacts.forEach(element => {
+                element.messages.forEach(el2 => {
+                   
+                  let deepMessage = console.log(el2.text); 
+                  return deepMessage
+                })
+                return deepMessage
+
+            })
+       
         }
+            
+   
     }
   })
+
+  

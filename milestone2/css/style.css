@@ -142,7 +142,7 @@ i {
     
 /* friend list */
 .active {
-    /* background-color: #e9ebeb; */
+    background-color: #e9ebeb;
 }
 
 .active:hover {
@@ -171,10 +171,12 @@ i {
     
 }
     .container-chat {
-        width: 80%;
         height: 90%;
         padding: 2rem 2rem;
         overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+
     }
         /* .leftchat{
             display: flex;
@@ -182,21 +184,22 @@ i {
         } */
 
             .message{
-                background-color: lightcoral;
-                padding: 1.3rem 4rem;
+                padding: 0.8rem 1.3rem;
                 border-radius: 11px;
+                width: 45%;
+                margin-bottom: 0.4rem;
             }
 
-            .message.friendchat {
+            .message.leftchat {
                 background-color: #fff;
             }
-            .message.userchat{
+            .message.rightchat{
                 background-color: #d5f9ba;
+                align-self: end;
             }
 
         /* .rightchat{   
-            display: flex;
-            justify-content: right;
+       
         } */
 
         .bottom-chat {
