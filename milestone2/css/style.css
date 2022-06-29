@@ -5,19 +5,15 @@
     box-sizing: border-box;
 }
 
-body {
-    /* background-color: green; */
-}
+
 /* Unico container centrale */
-.container {
-    padding-top: 1rem;
-    width: 80%;
-    margin: 0 auto;
-}
 
 .container-app {
-    width: 100%;
     height: 100vh;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    width: 75%;
+    margin: 0 auto;
 }
 
 /* Header */
@@ -86,7 +82,6 @@ i {
 
 .core {
     display: flex;
-    /* height: 500px; */
     height: 100%;
 }
 /* Common */
@@ -129,7 +124,6 @@ i {
 /* Inizio search friend bar */
 .searchfriend {
     background-color: #fafafa;
-    background-color: lightcoral;
     padding: 0.5rem;
 }
     input {
@@ -147,6 +141,18 @@ i {
         }
     
 /* friend list */
+.active {
+    /* background-color: #e9ebeb; */
+}
+
+.active:hover {
+    background-color: #e9ebeb;
+}
+
+
+.friendlist {
+    overflow-y: auto;
+}
 
 .friendlist .user-info {
     border-bottom: 1px solid #f6f6f6;
@@ -166,8 +172,9 @@ i {
 }
     .container-chat {
         width: 80%;
-        height: 85%;
+        height: 90%;
         padding: 2rem 2rem;
+        overflow-y: auto;
     }
         /* .leftchat{
             display: flex;
@@ -193,7 +200,7 @@ i {
         } */
 
         .bottom-chat {
-            height: 15%;
+            height: 10%;
             display: flex;
             align-items: center;
             background-color: #f3eeea;
@@ -202,7 +209,7 @@ i {
             .bottom-chat input {
                 width: 80%;
                 margin: 0 auto;
-                padding: 1.3rem 1rem;
+                padding: 0.7rem 1rem;
                 border-radius: 11px;
             }
 

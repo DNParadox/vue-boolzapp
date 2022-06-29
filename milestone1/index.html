@@ -64,8 +64,8 @@
                         </div>
                         <div class="searchfriend">
                             <div class="searchbar dflex">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                                <input type="text" placeholder="Cerca o inizia una nuova chat">
+                                <label for="friendlist"><i class="fa-solid fa-magnifying-glass"></i></label>
+                                <input id="friendlist" type="text" placeholder="Cerca o inizia una nuova chat">
                             </div>
                         </div>
                         <!-- Friend list -->
@@ -73,8 +73,6 @@
                             <!-- template in VUE -->
                                             <!-- User Info -->
                             <div v-for="(element,index) in contacts" class="user-info">
-                                <!-- <img src="img/avatar_io.jpg" alt="[Vue user]"> -->
-                                <!-- <img src="../milestone1/img/avatar_1.jpg" alt=""> -->
                                 <img :src="'img/avatar' + element.avatar + '.jpg'" :alt="contacts[index].name">
                                 <div class="utent-name pdl03">
                                     {{element.name}} <br>
@@ -89,7 +87,6 @@
                     <!-- right side -->
                     <div class="rightside">
                         <div class="container-chat">
-
                             <div class="leftchat">
                                 <div v-for="(element,index) in contacts" class="message friendchat">
                                     {{element.text}}
@@ -100,9 +97,7 @@
                                     [Vue Message]
                                 </div>
                             </div>
-                          
                         </div>
-
                         <div class="bottom-chat">
                             <div class="emoji">  
                                 <i class="fa-regular fa-face-smile"></i>
@@ -111,9 +106,6 @@
                             <div class="audio">
                                 <i class="fa-solid fa-microphone"></i>
                             </div>
-
-                          
-
                         </div>
                     </div>
                 </div>         
