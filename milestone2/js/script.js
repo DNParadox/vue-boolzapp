@@ -3,6 +3,7 @@ var app = new Vue({
     data:
      {
         index: 0,
+        userNewText: "",
         userFilterText: '',
         contacts: [
         {
@@ -109,20 +110,31 @@ var app = new Vue({
            this.index = chatindex;
         },
         
-        test(deepMessage) {
-            this.contacts.forEach(element => {
-                element.messages.forEach(el2 => {
-                   
-                  let deepMessage = console.log(el2.text); 
-                  return deepMessage
-                })
-                return deepMessage
+        insertInputText() {
+            let userText = this.userNewText;
 
-            })
-       
+            this.contacts[this.index].messages.push(
+                {
+                    date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
+                    text: userText,
+                    status: 'sent'
+                },   
+            )  
+            this.userNewText = "";
+
+            setTimeout(this.received  ,1000 ) 
+
+        },
+        received() {
+            this.contacts[this.index].messages.push(
+                {
+                    date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
+                    text: 'ok',
+                    status: 'received'
+                },   
+            )  
+
         }
-            
-   
     }
   })
 

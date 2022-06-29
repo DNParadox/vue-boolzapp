@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+
+
 </head>
 
 <body>
@@ -90,7 +93,8 @@
                 <div class="rightside">
                     <div class="container-chat">
                             <div v-for="(element,index) in contacts[index].messages" class="message" :class="element.status === 'received' ? 'leftchat' : 'rightchat'">
-                                {{element.text}}
+                               <span> {{element.text}} </span>
+                                <span> {{element.date}} </span>
                             </div>
                     
 
@@ -100,7 +104,7 @@
                         <div class="emoji">
                             <i class="fa-regular fa-face-smile"></i>
                         </div>
-                        <input type="text" placeholder="scrivi un messaggio">
+                        <input @keyup.enter="insertInputText()" v-model="userNewText" type="text" placeholder="scrivi un messaggio">
                         <div class="audio">
                             <i class="fa-solid fa-microphone"></i>
                         </div>
