@@ -2,6 +2,7 @@ var app = new Vue({
     el: '#app',
     data:
      {
+        currentActive: 0,
         index: 0,
         userNewText: "",
         userFilterText: '',
@@ -107,7 +108,9 @@ var app = new Vue({
             });
         },
         setClickChat(chatindex) {
+           this.currentActive = chatindex;
            this.index = chatindex;
+      
         },
         
         insertInputText() {

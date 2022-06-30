@@ -15,7 +15,6 @@
 </head>
 
 <body>
- 
         <div id="app" class="container-app">
             <!-- Header APP -->
             <div class="header-app">
@@ -38,7 +37,7 @@
                 <div class="header-app-right">
                     <!-- User Info -->
                     <div class="user-info">
-                        <img :src="'img/avatar' + contacts[index].avatar + '.jpg'" alt="[Vue user]">
+                        <img :src="'img/avatar' + contacts[index].avatar + '.jpg'" :alt="contacts[index].name">
                         <div class="utent-name pdl03">
                             {{contacts[index].name}}<br>
                             <div class="date">
@@ -81,8 +80,11 @@
                     <div class="friendlist">
                         <!-- template in VUE -->
                         <!-- User Info -->
-                        <div v-if="element.visible" v-for="(element,index) in contacts" class="user-info"
-                            :class="{'active': index === index}" @click="setClickChat(index)">
+                        <div v-if="element.visible"
+                            v-for="element,index in contacts" 
+                            class="user-info"
+                            :class="{'active': index === currentActive}"
+                            @click="setClickChat(index)">
                             <img :src="'img/avatar' + element.avatar + '.jpg'" :alt="contacts[index].name">
                             <div class="utent-name  pdl03">
                                 {{element.name}} <br>
@@ -119,7 +121,6 @@
                 </div>
             </div>
         </div>
-
     <script src="js/script.js"></script>
 </body>
 

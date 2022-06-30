@@ -19,7 +19,7 @@
 /* Header */
 .header-app{
     display: flex;
-    background-color: #eaeaea;;
+    background-color: #eaeaea;
 }
 
     /* Header App left */
@@ -151,7 +151,7 @@ i {
     background-color: #e9ebeb;
 }
 
-.active:hover {
+.user-info:hover {
     background-color: #e9ebeb;
 }
 
