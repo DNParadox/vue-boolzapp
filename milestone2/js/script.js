@@ -124,9 +124,7 @@ var app = new Vue({
                 },   
             )  
             this.userNewText = "";
-
-            setTimeout(this.received  ,1000 ) 
-
+            setTimeout(this.received, 1000 ) 
         },
         received() {
             this.contacts[this.index].messages.push(
@@ -136,7 +134,6 @@ var app = new Vue({
                     status: 'received'
                 },   
             )  
-
         }
     }
   })
